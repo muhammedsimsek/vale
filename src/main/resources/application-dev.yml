@@ -1,0 +1,9 @@
+spring :
+  datasource :
+    url : jdbc:postgresql://localhost:5432/vale
+    username : postgres
+    password : Eleanor
+
+  jpa:
+    hibernate:
+      ddl-auto : update
