@@ -4,6 +4,10 @@ spring :
     username : postgres
     password : Eleanor
 
-  jpa:
+
+#    initialization-mode : always
+
+  jpa :
     hibernate:
       ddl-auto : update
+

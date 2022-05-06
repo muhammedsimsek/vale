@@ -1,7 +1,12 @@
 package com.simsek.vale.domain;
 
-import javax.persistence.*;
+import lombok.*;
 
+import javax.persistence.*;
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 @Entity
 @Table(name = "employee")
 public class Employee extends BaseDomain {
@@ -12,6 +17,12 @@ public class Employee extends BaseDomain {
     @Column(nullable = false)
     private Long id;
 
+    @NonNull
     private String name;
     private String phone;
+
+    public Employee(String name, String phone) {
+        this.name = name;
+        this.phone = phone;
+    }
 }

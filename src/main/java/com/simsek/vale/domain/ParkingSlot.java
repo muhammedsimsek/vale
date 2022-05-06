@@ -1,9 +1,16 @@
 package com.simsek.vale.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
-
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 @Entity
-
 public class ParkingSlot  extends BaseDomain{
     @Id
     @SequenceGenerator(name = "parking_slot_seq", allocationSize = 1)

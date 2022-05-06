@@ -1,7 +1,13 @@
 package com.simsek.vale.domain;
 
-import javax.persistence.*;
+import lombok.*;
 
+import javax.persistence.*;
+@AllArgsConstructor
+@RequiredArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 @Entity
 public class ParkingArea extends BaseDomain {
     @Id
@@ -9,5 +15,7 @@ public class ParkingArea extends BaseDomain {
     @GeneratedValue(generator = "parking_area_seq", strategy = GenerationType.SEQUENCE)
     @Column(nullable = false)
     private Long id;
+
+    @NonNull
     private String name;
 }
